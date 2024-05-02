@@ -8089,3 +8089,1243 @@ Please also refer to the documentation for alternative solver options:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2024-05-02 14:51:06,304:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-02 14:51:08,533:INFO:PyCaret ClassificationExperiment
+2024-05-02 14:51:08,533:INFO:Logging name: clf-default-name
+2024-05-02 14:51:08,533:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2024-05-02 14:51:08,533:INFO:version 3.3.2
+2024-05-02 14:51:08,533:INFO:Initializing setup()
+2024-05-02 14:51:08,533:INFO:self.USI: 8c9d
+2024-05-02 14:51:08,533:INFO:self._variable_keys: {'X', 'fold_generator', 'gpu_n_jobs_param', 'idx', 'y_train', 'USI', 'X_train', 'fix_imbalance', 'fold_groups_param', 'log_plots_param', 'y', 'y_test', 'seed', 'memory', '_ml_usecase', 'fold_shuffle_param', 'logging_param', 'target_param', 'pipeline', 'data', 'is_multiclass', '_available_plots', 'gpu_param', 'n_jobs_param', 'html_param', 'exp_name_log', 'exp_id', 'X_test'}
+2024-05-02 14:51:08,534:INFO:Checking environment
+2024-05-02 14:51:08,534:INFO:python_version: 3.9.13
+2024-05-02 14:51:08,534:INFO:python_build: ('tags/v3.9.13:6de2ca5', 'May 17 2022 16:36:42')
+2024-05-02 14:51:08,534:INFO:machine: AMD64
+2024-05-02 14:51:08,534:INFO:platform: Windows-10-10.0.22631-SP0
+2024-05-02 14:51:08,538:INFO:Memory: svmem(total=68580765696, available=54188302336, percent=21.0, used=14392463360, free=54188302336)
+2024-05-02 14:51:08,538:INFO:Physical Core: 8
+2024-05-02 14:51:08,538:INFO:Logical Core: 16
+2024-05-02 14:51:08,538:INFO:Checking libraries
+2024-05-02 14:51:08,538:INFO:System:
+2024-05-02 14:51:08,538:INFO:    python: 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+2024-05-02 14:51:08,539:INFO:executable: d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\Scripts\python.exe
+2024-05-02 14:51:08,539:INFO:   machine: Windows-10-10.0.22631-SP0
+2024-05-02 14:51:08,539:INFO:PyCaret required dependencies:
+2024-05-02 14:51:09,234:INFO:                 pip: 24.0
+2024-05-02 14:51:09,234:INFO:          setuptools: 58.1.0
+2024-05-02 14:51:09,234:INFO:             pycaret: 3.3.2
+2024-05-02 14:51:09,234:INFO:             IPython: 8.18.1
+2024-05-02 14:51:09,234:INFO:          ipywidgets: 8.1.2
+2024-05-02 14:51:09,234:INFO:                tqdm: 4.66.2
+2024-05-02 14:51:09,234:INFO:               numpy: 1.26.4
+2024-05-02 14:51:09,234:INFO:              pandas: 2.1.4
+2024-05-02 14:51:09,234:INFO:              jinja2: 3.1.3
+2024-05-02 14:51:09,234:INFO:               scipy: 1.11.4
+2024-05-02 14:51:09,234:INFO:              joblib: 1.3.2
+2024-05-02 14:51:09,234:INFO:             sklearn: 1.4.2
+2024-05-02 14:51:09,234:INFO:                pyod: 1.1.3
+2024-05-02 14:51:09,235:INFO:            imblearn: 0.12.2
+2024-05-02 14:51:09,235:INFO:   category_encoders: 2.6.3
+2024-05-02 14:51:09,235:INFO:            lightgbm: 4.3.0
+2024-05-02 14:51:09,235:INFO:               numba: 0.59.1
+2024-05-02 14:51:09,235:INFO:            requests: 2.31.0
+2024-05-02 14:51:09,235:INFO:          matplotlib: 3.6.0
+2024-05-02 14:51:09,235:INFO:          scikitplot: 0.3.7
+2024-05-02 14:51:09,235:INFO:         yellowbrick: 1.5
+2024-05-02 14:51:09,235:INFO:              plotly: 5.22.0
+2024-05-02 14:51:09,235:INFO:    plotly-resampler: Not installed
+2024-05-02 14:51:09,235:INFO:             kaleido: 0.2.1
+2024-05-02 14:51:09,235:INFO:           schemdraw: 0.15
+2024-05-02 14:51:09,235:INFO:         statsmodels: 0.14.2
+2024-05-02 14:51:09,235:INFO:              sktime: 0.26.0
+2024-05-02 14:51:09,235:INFO:               tbats: 1.1.3
+2024-05-02 14:51:09,235:INFO:            pmdarima: 2.0.4
+2024-05-02 14:51:09,235:INFO:              psutil: 5.9.8
+2024-05-02 14:51:09,235:INFO:          markupsafe: 2.1.5
+2024-05-02 14:51:09,235:INFO:             pickle5: Not installed
+2024-05-02 14:51:09,235:INFO:         cloudpickle: 3.0.0
+2024-05-02 14:51:09,235:INFO:         deprecation: 2.1.0
+2024-05-02 14:51:09,235:INFO:              xxhash: 3.4.1
+2024-05-02 14:51:09,235:INFO:           wurlitzer: Not installed
+2024-05-02 14:51:09,235:INFO:PyCaret optional dependencies:
+2024-05-02 14:51:11,159:INFO:                shap: 0.44.1
+2024-05-02 14:51:11,159:INFO:           interpret: 0.6.1
+2024-05-02 14:51:11,159:INFO:                umap: 0.5.6
+2024-05-02 14:51:11,159:INFO:     ydata_profiling: 4.7.0
+2024-05-02 14:51:11,159:INFO:  explainerdashboard: 0.4.7
+2024-05-02 14:51:11,159:INFO:             autoviz: Not installed
+2024-05-02 14:51:11,160:INFO:           fairlearn: 0.7.0
+2024-05-02 14:51:11,160:INFO:          deepchecks: Not installed
+2024-05-02 14:51:11,160:INFO:             xgboost: 2.0.3
+2024-05-02 14:51:11,160:INFO:            catboost: 1.2.5
+2024-05-02 14:51:11,160:INFO:              kmodes: 0.12.2
+2024-05-02 14:51:11,160:INFO:             mlxtend: 0.23.1
+2024-05-02 14:51:11,160:INFO:       statsforecast: 1.5.0
+2024-05-02 14:51:11,160:INFO:        tune_sklearn: Not installed
+2024-05-02 14:51:11,160:INFO:                 ray: Not installed
+2024-05-02 14:51:11,160:INFO:            hyperopt: 0.2.7
+2024-05-02 14:51:11,160:INFO:              optuna: 3.6.1
+2024-05-02 14:51:11,160:INFO:               skopt: 0.10.1
+2024-05-02 14:51:11,160:INFO:              mlflow: 2.12.1
+2024-05-02 14:51:11,160:INFO:              gradio: 4.26.0
+2024-05-02 14:51:11,160:INFO:             fastapi: 0.110.3
+2024-05-02 14:51:11,160:INFO:             uvicorn: 0.29.0
+2024-05-02 14:51:11,160:INFO:              m2cgen: 0.10.0
+2024-05-02 14:51:11,160:INFO:           evidently: 0.4.19
+2024-05-02 14:51:11,160:INFO:               fugue: 0.8.7
+2024-05-02 14:51:11,160:INFO:           streamlit: Not installed
+2024-05-02 14:51:11,160:INFO:             prophet: Not installed
+2024-05-02 14:51:11,160:INFO:None
+2024-05-02 14:51:11,160:INFO:Set up data.
+2024-05-02 14:51:11,166:INFO:Set up folding strategy.
+2024-05-02 14:51:11,166:INFO:Set up train/test split.
+2024-05-02 14:51:11,175:INFO:Set up index.
+2024-05-02 14:51:11,175:INFO:Assigning column types.
+2024-05-02 14:51:11,181:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2024-05-02 14:51:11,218:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-05-02 14:51:11,221:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-05-02 14:51:11,249:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,251:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,303:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2024-05-02 14:51:11,304:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-05-02 14:51:11,328:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,330:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,331:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2024-05-02 14:51:11,370:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-05-02 14:51:11,394:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,396:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,434:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2024-05-02 14:51:11,458:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,460:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,461:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2024-05-02 14:51:11,524:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,527:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,583:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,585:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,586:INFO:Preparing preprocessing pipeline...
+2024-05-02 14:51:11,589:INFO:Set up simple imputation.
+2024-05-02 14:51:11,611:INFO:Finished creating preprocessing pipeline.
+2024-05-02 14:51:11,614:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\almontao\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False)
+2024-05-02 14:51:11,614:INFO:Creating final display dataframe.
+2024-05-02 14:51:11,677:INFO:Setup _display_container:                     Description             Value
+0                    Session id              3386
+1                        Target                 y
+2                   Target type            Binary
+3           Original data shape       (18479, 13)
+4        Transformed data shape       (18479, 13)
+5   Transformed train set shape       (12935, 13)
+6    Transformed test set shape        (5544, 13)
+7              Numeric features                12
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU             False
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              8c9d
+2024-05-02 14:51:11,741:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,743:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,802:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,804:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,806:INFO:setup() successfully completed in 3.27s...............
+2024-05-02 14:51:11,840:INFO:gpu_param set to False
+2024-05-02 14:51:11,905:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,905:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:11,982:INFO:Soft dependency imported: xgboost: 2.0.3
+2024-05-02 14:51:11,985:INFO:Soft dependency imported: catboost: 1.2.5
+2024-05-02 14:51:12,020:INFO:Initializing compare_models()
+2024-05-02 14:51:12,020:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, include=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>}, exclude=None)
+2024-05-02 14:51:12,020:INFO:Checking exceptions
+2024-05-02 14:51:12,021:INFO:Preparing display monitor
+2024-05-02 14:51:12,047:INFO:Initializing Logistic Regression
+2024-05-02 14:51:12,047:INFO:Total runtime is 0.0 minutes
+2024-05-02 14:51:12,049:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:12,049:INFO:Initializing create_model()
+2024-05-02 14:51:12,049:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:12,049:INFO:Checking exceptions
+2024-05-02 14:51:12,049:INFO:Importing libraries
+2024-05-02 14:51:12,049:INFO:Copying training dataset
+2024-05-02 14:51:12,061:INFO:Defining folds
+2024-05-02 14:51:12,061:INFO:Declaring metric variables
+2024-05-02 14:51:12,064:INFO:Importing untrained model
+2024-05-02 14:51:12,067:INFO:Logistic Regression Imported successfully
+2024-05-02 14:51:12,073:INFO:Starting cross validation
+2024-05-02 14:51:12,075:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:16,989:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+2024-05-02 14:51:17,010:INFO:Calculating mean and std
+2024-05-02 14:51:17,011:INFO:Creating metrics dataframe
+2024-05-02 14:51:17,013:INFO:Uploading results into container
+2024-05-02 14:51:17,014:INFO:Uploading model into container now
+2024-05-02 14:51:17,014:INFO:_master_model_container: 1
+2024-05-02 14:51:17,014:INFO:_display_container: 2
+2024-05-02 14:51:17,014:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=3386, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2024-05-02 14:51:17,014:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:17,101:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:17,101:INFO:Creating metrics dataframe
+2024-05-02 14:51:17,106:INFO:Initializing K Neighbors Classifier
+2024-05-02 14:51:17,106:INFO:Total runtime is 0.08432505130767823 minutes
+2024-05-02 14:51:17,110:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:17,110:INFO:Initializing create_model()
+2024-05-02 14:51:17,111:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:17,111:INFO:Checking exceptions
+2024-05-02 14:51:17,111:INFO:Importing libraries
+2024-05-02 14:51:17,111:INFO:Copying training dataset
+2024-05-02 14:51:17,120:INFO:Defining folds
+2024-05-02 14:51:17,120:INFO:Declaring metric variables
+2024-05-02 14:51:17,125:INFO:Importing untrained model
+2024-05-02 14:51:17,127:INFO:K Neighbors Classifier Imported successfully
+2024-05-02 14:51:17,134:INFO:Starting cross validation
+2024-05-02 14:51:17,135:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:20,380:INFO:Calculating mean and std
+2024-05-02 14:51:20,381:INFO:Creating metrics dataframe
+2024-05-02 14:51:20,383:INFO:Uploading results into container
+2024-05-02 14:51:20,383:INFO:Uploading model into container now
+2024-05-02 14:51:20,384:INFO:_master_model_container: 2
+2024-05-02 14:51:20,384:INFO:_display_container: 2
+2024-05-02 14:51:20,384:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2024-05-02 14:51:20,384:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:20,480:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:20,480:INFO:Creating metrics dataframe
+2024-05-02 14:51:20,487:INFO:Initializing Naive Bayes
+2024-05-02 14:51:20,488:INFO:Total runtime is 0.14068515300750734 minutes
+2024-05-02 14:51:20,491:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:20,491:INFO:Initializing create_model()
+2024-05-02 14:51:20,492:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:20,492:INFO:Checking exceptions
+2024-05-02 14:51:20,492:INFO:Importing libraries
+2024-05-02 14:51:20,492:INFO:Copying training dataset
+2024-05-02 14:51:20,502:INFO:Defining folds
+2024-05-02 14:51:20,502:INFO:Declaring metric variables
+2024-05-02 14:51:20,507:INFO:Importing untrained model
+2024-05-02 14:51:20,509:INFO:Naive Bayes Imported successfully
+2024-05-02 14:51:20,516:INFO:Starting cross validation
+2024-05-02 14:51:20,517:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:20,597:INFO:Calculating mean and std
+2024-05-02 14:51:20,598:INFO:Creating metrics dataframe
+2024-05-02 14:51:20,599:INFO:Uploading results into container
+2024-05-02 14:51:20,600:INFO:Uploading model into container now
+2024-05-02 14:51:20,600:INFO:_master_model_container: 3
+2024-05-02 14:51:20,600:INFO:_display_container: 2
+2024-05-02 14:51:20,600:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2024-05-02 14:51:20,600:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:20,692:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:20,692:INFO:Creating metrics dataframe
+2024-05-02 14:51:20,698:INFO:Initializing Decision Tree Classifier
+2024-05-02 14:51:20,698:INFO:Total runtime is 0.14417899052302044 minutes
+2024-05-02 14:51:20,700:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:20,700:INFO:Initializing create_model()
+2024-05-02 14:51:20,701:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:20,701:INFO:Checking exceptions
+2024-05-02 14:51:20,701:INFO:Importing libraries
+2024-05-02 14:51:20,701:INFO:Copying training dataset
+2024-05-02 14:51:20,709:INFO:Defining folds
+2024-05-02 14:51:20,709:INFO:Declaring metric variables
+2024-05-02 14:51:20,713:INFO:Importing untrained model
+2024-05-02 14:51:20,716:INFO:Decision Tree Classifier Imported successfully
+2024-05-02 14:51:20,720:INFO:Starting cross validation
+2024-05-02 14:51:20,722:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:20,845:INFO:Calculating mean and std
+2024-05-02 14:51:20,845:INFO:Creating metrics dataframe
+2024-05-02 14:51:20,845:INFO:Uploading results into container
+2024-05-02 14:51:20,845:INFO:Uploading model into container now
+2024-05-02 14:51:20,845:INFO:_master_model_container: 4
+2024-05-02 14:51:20,845:INFO:_display_container: 2
+2024-05-02 14:51:20,845:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=3386, splitter='best')
+2024-05-02 14:51:20,845:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:20,940:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:20,940:INFO:Creating metrics dataframe
+2024-05-02 14:51:20,946:INFO:Initializing SVM - Linear Kernel
+2024-05-02 14:51:20,946:INFO:Total runtime is 0.14831730922063194 minutes
+2024-05-02 14:51:20,949:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:20,950:INFO:Initializing create_model()
+2024-05-02 14:51:20,950:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:20,950:INFO:Checking exceptions
+2024-05-02 14:51:20,950:INFO:Importing libraries
+2024-05-02 14:51:20,950:INFO:Copying training dataset
+2024-05-02 14:51:20,958:INFO:Defining folds
+2024-05-02 14:51:20,958:INFO:Declaring metric variables
+2024-05-02 14:51:20,961:INFO:Importing untrained model
+2024-05-02 14:51:20,966:INFO:SVM - Linear Kernel Imported successfully
+2024-05-02 14:51:20,971:INFO:Starting cross validation
+2024-05-02 14:51:20,972:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:21,137:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:51:21,139:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:51:21,146:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:51:21,161:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:51:21,192:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:51:21,214:INFO:Calculating mean and std
+2024-05-02 14:51:21,215:INFO:Creating metrics dataframe
+2024-05-02 14:51:21,216:INFO:Uploading results into container
+2024-05-02 14:51:21,217:INFO:Uploading model into container now
+2024-05-02 14:51:21,217:INFO:_master_model_container: 5
+2024-05-02 14:51:21,217:INFO:_display_container: 2
+2024-05-02 14:51:21,217:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=3386, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2024-05-02 14:51:21,217:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:21,312:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:21,312:INFO:Creating metrics dataframe
+2024-05-02 14:51:21,319:INFO:Initializing Ridge Classifier
+2024-05-02 14:51:21,319:INFO:Total runtime is 0.1545396685600281 minutes
+2024-05-02 14:51:21,322:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:21,323:INFO:Initializing create_model()
+2024-05-02 14:51:21,323:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:21,323:INFO:Checking exceptions
+2024-05-02 14:51:21,323:INFO:Importing libraries
+2024-05-02 14:51:21,323:INFO:Copying training dataset
+2024-05-02 14:51:21,331:INFO:Defining folds
+2024-05-02 14:51:21,331:INFO:Declaring metric variables
+2024-05-02 14:51:21,334:INFO:Importing untrained model
+2024-05-02 14:51:21,337:INFO:Ridge Classifier Imported successfully
+2024-05-02 14:51:21,342:INFO:Starting cross validation
+2024-05-02 14:51:21,343:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:21,368:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.47678e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,372:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.5031e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,372:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.47419e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,374:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.47683e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,376:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.45928e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,379:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.51477e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,382:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=1.25781e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,382:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.48603e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,390:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.52441e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,395:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\linear_model\_ridge.py:204: LinAlgWarning: Ill-conditioned matrix (rcond=2.48329e-13): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+
+2024-05-02 14:51:21,416:INFO:Calculating mean and std
+2024-05-02 14:51:21,416:INFO:Creating metrics dataframe
+2024-05-02 14:51:21,418:INFO:Uploading results into container
+2024-05-02 14:51:21,418:INFO:Uploading model into container now
+2024-05-02 14:51:21,418:INFO:_master_model_container: 6
+2024-05-02 14:51:21,419:INFO:_display_container: 2
+2024-05-02 14:51:21,419:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=3386, solver='auto',
+                tol=0.0001)
+2024-05-02 14:51:21,419:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:21,504:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:21,504:INFO:Creating metrics dataframe
+2024-05-02 14:51:21,516:INFO:Initializing Random Forest Classifier
+2024-05-02 14:51:21,516:INFO:Total runtime is 0.15780874490737917 minutes
+2024-05-02 14:51:21,516:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:21,516:INFO:Initializing create_model()
+2024-05-02 14:51:21,516:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:21,516:INFO:Checking exceptions
+2024-05-02 14:51:21,516:INFO:Importing libraries
+2024-05-02 14:51:21,516:INFO:Copying training dataset
+2024-05-02 14:51:21,534:INFO:Defining folds
+2024-05-02 14:51:21,534:INFO:Declaring metric variables
+2024-05-02 14:51:21,537:INFO:Importing untrained model
+2024-05-02 14:51:21,541:INFO:Random Forest Classifier Imported successfully
+2024-05-02 14:51:21,546:INFO:Starting cross validation
+2024-05-02 14:51:21,546:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:22,647:INFO:Calculating mean and std
+2024-05-02 14:51:22,648:INFO:Creating metrics dataframe
+2024-05-02 14:51:22,649:INFO:Uploading results into container
+2024-05-02 14:51:22,650:INFO:Uploading model into container now
+2024-05-02 14:51:22,650:INFO:_master_model_container: 7
+2024-05-02 14:51:22,650:INFO:_display_container: 2
+2024-05-02 14:51:22,650:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=3386, verbose=0,
+                       warm_start=False)
+2024-05-02 14:51:22,651:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:22,745:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:22,745:INFO:Creating metrics dataframe
+2024-05-02 14:51:22,753:INFO:Initializing Quadratic Discriminant Analysis
+2024-05-02 14:51:22,753:INFO:Total runtime is 0.17843388716379804 minutes
+2024-05-02 14:51:22,755:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:22,755:INFO:Initializing create_model()
+2024-05-02 14:51:22,755:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:22,756:INFO:Checking exceptions
+2024-05-02 14:51:22,756:INFO:Importing libraries
+2024-05-02 14:51:22,757:INFO:Copying training dataset
+2024-05-02 14:51:22,765:INFO:Defining folds
+2024-05-02 14:51:22,765:INFO:Declaring metric variables
+2024-05-02 14:51:22,768:INFO:Importing untrained model
+2024-05-02 14:51:22,772:INFO:Quadratic Discriminant Analysis Imported successfully
+2024-05-02 14:51:22,777:INFO:Starting cross validation
+2024-05-02 14:51:22,778:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:22,808:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,808:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,810:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,813:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,813:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,820:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,824:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,828:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,829:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,838:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2024-05-02 14:51:22,873:INFO:Calculating mean and std
+2024-05-02 14:51:22,874:INFO:Creating metrics dataframe
+2024-05-02 14:51:22,875:INFO:Uploading results into container
+2024-05-02 14:51:22,876:INFO:Uploading model into container now
+2024-05-02 14:51:22,876:INFO:_master_model_container: 8
+2024-05-02 14:51:22,876:INFO:_display_container: 2
+2024-05-02 14:51:22,877:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2024-05-02 14:51:22,877:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:22,965:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:22,965:INFO:Creating metrics dataframe
+2024-05-02 14:51:22,972:INFO:Initializing Ada Boost Classifier
+2024-05-02 14:51:22,973:INFO:Total runtime is 0.18209338982899986 minutes
+2024-05-02 14:51:22,975:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:22,975:INFO:Initializing create_model()
+2024-05-02 14:51:22,976:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:22,976:INFO:Checking exceptions
+2024-05-02 14:51:22,976:INFO:Importing libraries
+2024-05-02 14:51:22,976:INFO:Copying training dataset
+2024-05-02 14:51:22,984:INFO:Defining folds
+2024-05-02 14:51:22,984:INFO:Declaring metric variables
+2024-05-02 14:51:22,987:INFO:Importing untrained model
+2024-05-02 14:51:22,990:INFO:Ada Boost Classifier Imported successfully
+2024-05-02 14:51:22,995:INFO:Starting cross validation
+2024-05-02 14:51:22,995:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:23,020:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,023:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,026:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,027:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,032:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,034:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,040:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,042:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,045:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,047:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:51:23,457:INFO:Calculating mean and std
+2024-05-02 14:51:23,458:INFO:Creating metrics dataframe
+2024-05-02 14:51:23,459:INFO:Uploading results into container
+2024-05-02 14:51:23,460:INFO:Uploading model into container now
+2024-05-02 14:51:23,460:INFO:_master_model_container: 9
+2024-05-02 14:51:23,460:INFO:_display_container: 2
+2024-05-02 14:51:23,460:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386)
+2024-05-02 14:51:23,460:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:23,539:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:23,539:INFO:Creating metrics dataframe
+2024-05-02 14:51:23,539:INFO:Initializing Gradient Boosting Classifier
+2024-05-02 14:51:23,539:INFO:Total runtime is 0.19153691132863365 minutes
+2024-05-02 14:51:23,539:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:23,539:INFO:Initializing create_model()
+2024-05-02 14:51:23,539:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:23,539:INFO:Checking exceptions
+2024-05-02 14:51:23,539:INFO:Importing libraries
+2024-05-02 14:51:23,539:INFO:Copying training dataset
+2024-05-02 14:51:23,555:INFO:Defining folds
+2024-05-02 14:51:23,555:INFO:Declaring metric variables
+2024-05-02 14:51:23,555:INFO:Importing untrained model
+2024-05-02 14:51:23,555:INFO:Gradient Boosting Classifier Imported successfully
+2024-05-02 14:51:23,570:INFO:Starting cross validation
+2024-05-02 14:51:23,570:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:24,601:INFO:Calculating mean and std
+2024-05-02 14:51:24,603:INFO:Creating metrics dataframe
+2024-05-02 14:51:24,605:INFO:Uploading results into container
+2024-05-02 14:51:24,605:INFO:Uploading model into container now
+2024-05-02 14:51:24,605:INFO:_master_model_container: 10
+2024-05-02 14:51:24,605:INFO:_display_container: 2
+2024-05-02 14:51:24,606:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=3386, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2024-05-02 14:51:24,606:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:24,680:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:24,680:INFO:Creating metrics dataframe
+2024-05-02 14:51:24,696:INFO:Initializing Linear Discriminant Analysis
+2024-05-02 14:51:24,696:INFO:Total runtime is 0.2108089288075765 minutes
+2024-05-02 14:51:24,696:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:24,696:INFO:Initializing create_model()
+2024-05-02 14:51:24,696:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:24,696:INFO:Checking exceptions
+2024-05-02 14:51:24,696:INFO:Importing libraries
+2024-05-02 14:51:24,696:INFO:Copying training dataset
+2024-05-02 14:51:24,696:INFO:Defining folds
+2024-05-02 14:51:24,696:INFO:Declaring metric variables
+2024-05-02 14:51:24,711:INFO:Importing untrained model
+2024-05-02 14:51:24,711:INFO:Linear Discriminant Analysis Imported successfully
+2024-05-02 14:51:24,711:INFO:Starting cross validation
+2024-05-02 14:51:24,711:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:24,805:INFO:Calculating mean and std
+2024-05-02 14:51:24,805:INFO:Creating metrics dataframe
+2024-05-02 14:51:24,805:INFO:Uploading results into container
+2024-05-02 14:51:24,805:INFO:Uploading model into container now
+2024-05-02 14:51:24,805:INFO:_master_model_container: 11
+2024-05-02 14:51:24,805:INFO:_display_container: 2
+2024-05-02 14:51:24,805:INFO:LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001)
+2024-05-02 14:51:24,805:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:24,883:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:24,883:INFO:Creating metrics dataframe
+2024-05-02 14:51:24,883:INFO:Initializing Extra Trees Classifier
+2024-05-02 14:51:24,883:INFO:Total runtime is 0.2139346202214559 minutes
+2024-05-02 14:51:24,899:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:24,899:INFO:Initializing create_model()
+2024-05-02 14:51:24,899:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=et, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:24,899:INFO:Checking exceptions
+2024-05-02 14:51:24,899:INFO:Importing libraries
+2024-05-02 14:51:24,899:INFO:Copying training dataset
+2024-05-02 14:51:24,899:INFO:Defining folds
+2024-05-02 14:51:24,899:INFO:Declaring metric variables
+2024-05-02 14:51:24,899:INFO:Importing untrained model
+2024-05-02 14:51:24,914:INFO:Extra Trees Classifier Imported successfully
+2024-05-02 14:51:24,914:INFO:Starting cross validation
+2024-05-02 14:51:24,914:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:25,883:INFO:Calculating mean and std
+2024-05-02 14:51:25,883:INFO:Creating metrics dataframe
+2024-05-02 14:51:25,883:INFO:Uploading results into container
+2024-05-02 14:51:25,883:INFO:Uploading model into container now
+2024-05-02 14:51:25,883:INFO:_master_model_container: 12
+2024-05-02 14:51:25,883:INFO:_display_container: 2
+2024-05-02 14:51:25,883:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=3386, verbose=0,
+                     warm_start=False)
+2024-05-02 14:51:25,883:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:25,962:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:25,962:INFO:Creating metrics dataframe
+2024-05-02 14:51:25,977:INFO:Initializing Extreme Gradient Boosting
+2024-05-02 14:51:25,977:INFO:Total runtime is 0.23217059373855592 minutes
+2024-05-02 14:51:25,977:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:25,977:INFO:Initializing create_model()
+2024-05-02 14:51:25,977:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=xgboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:25,977:INFO:Checking exceptions
+2024-05-02 14:51:25,977:INFO:Importing libraries
+2024-05-02 14:51:25,977:INFO:Copying training dataset
+2024-05-02 14:51:25,993:INFO:Defining folds
+2024-05-02 14:51:25,993:INFO:Declaring metric variables
+2024-05-02 14:51:25,993:INFO:Importing untrained model
+2024-05-02 14:51:25,993:INFO:Extreme Gradient Boosting Imported successfully
+2024-05-02 14:51:26,008:INFO:Starting cross validation
+2024-05-02 14:51:26,008:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:26,352:INFO:Calculating mean and std
+2024-05-02 14:51:26,352:INFO:Creating metrics dataframe
+2024-05-02 14:51:26,352:INFO:Uploading results into container
+2024-05-02 14:51:26,352:INFO:Uploading model into container now
+2024-05-02 14:51:26,352:INFO:_master_model_container: 13
+2024-05-02 14:51:26,352:INFO:_display_container: 2
+2024-05-02 14:51:26,352:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=-1,
+              num_parallel_tree=None, objective='binary:logistic', ...)
+2024-05-02 14:51:26,352:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:26,430:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:26,430:INFO:Creating metrics dataframe
+2024-05-02 14:51:26,430:INFO:Initializing Light Gradient Boosting Machine
+2024-05-02 14:51:26,430:INFO:Total runtime is 0.23972272078196208 minutes
+2024-05-02 14:51:26,446:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:26,446:INFO:Initializing create_model()
+2024-05-02 14:51:26,446:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:26,446:INFO:Checking exceptions
+2024-05-02 14:51:26,446:INFO:Importing libraries
+2024-05-02 14:51:26,446:INFO:Copying training dataset
+2024-05-02 14:51:26,446:INFO:Defining folds
+2024-05-02 14:51:26,446:INFO:Declaring metric variables
+2024-05-02 14:51:26,446:INFO:Importing untrained model
+2024-05-02 14:51:26,462:INFO:Light Gradient Boosting Machine Imported successfully
+2024-05-02 14:51:26,462:INFO:Starting cross validation
+2024-05-02 14:51:26,462:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:51:27,493:INFO:Calculating mean and std
+2024-05-02 14:51:27,493:INFO:Creating metrics dataframe
+2024-05-02 14:51:27,493:INFO:Uploading results into container
+2024-05-02 14:51:27,493:INFO:Uploading model into container now
+2024-05-02 14:51:27,493:INFO:_master_model_container: 14
+2024-05-02 14:51:27,493:INFO:_display_container: 2
+2024-05-02 14:51:27,493:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=3386, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2024-05-02 14:51:27,493:INFO:create_model() successfully completed......................................
+2024-05-02 14:51:27,616:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:51:27,616:INFO:Creating metrics dataframe
+2024-05-02 14:51:27,622:INFO:Initializing CatBoost Classifier
+2024-05-02 14:51:27,622:INFO:Total runtime is 0.2595771749814351 minutes
+2024-05-02 14:51:27,622:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:51:27,622:INFO:Initializing create_model()
+2024-05-02 14:51:27,622:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=catboost, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:51:27,622:INFO:Checking exceptions
+2024-05-02 14:51:27,622:INFO:Importing libraries
+2024-05-02 14:51:27,622:INFO:Copying training dataset
+2024-05-02 14:51:27,622:INFO:Defining folds
+2024-05-02 14:51:27,622:INFO:Declaring metric variables
+2024-05-02 14:51:27,637:INFO:Importing untrained model
+2024-05-02 14:51:27,637:INFO:CatBoost Classifier Imported successfully
+2024-05-02 14:51:27,637:INFO:Starting cross validation
+2024-05-02 14:51:27,637:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:52:00,408:INFO:Calculating mean and std
+2024-05-02 14:52:00,410:INFO:Creating metrics dataframe
+2024-05-02 14:52:00,412:INFO:Uploading results into container
+2024-05-02 14:52:00,413:INFO:Uploading model into container now
+2024-05-02 14:52:00,413:INFO:_master_model_container: 15
+2024-05-02 14:52:00,413:INFO:_display_container: 2
+2024-05-02 14:52:00,414:INFO:<catboost.core.CatBoostClassifier object at 0x000001FE37597040>
+2024-05-02 14:52:00,414:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:00,513:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:52:00,513:INFO:Creating metrics dataframe
+2024-05-02 14:52:00,523:INFO:Initializing Dummy Classifier
+2024-05-02 14:52:00,523:INFO:Total runtime is 0.8079312046368916 minutes
+2024-05-02 14:52:00,527:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:52:00,527:INFO:Initializing create_model()
+2024-05-02 14:52:00,527:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=dummy, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3D25ECD0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:52:00,527:INFO:Checking exceptions
+2024-05-02 14:52:00,527:INFO:Importing libraries
+2024-05-02 14:52:00,527:INFO:Copying training dataset
+2024-05-02 14:52:00,538:INFO:Defining folds
+2024-05-02 14:52:00,539:INFO:Declaring metric variables
+2024-05-02 14:52:00,542:INFO:Importing untrained model
+2024-05-02 14:52:00,546:INFO:Dummy Classifier Imported successfully
+2024-05-02 14:52:00,553:INFO:Starting cross validation
+2024-05-02 14:52:00,554:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:52:00,596:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,598:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,600:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,602:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,603:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,617:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,617:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,619:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,620:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,626:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2024-05-02 14:52:00,648:INFO:Calculating mean and std
+2024-05-02 14:52:00,649:INFO:Creating metrics dataframe
+2024-05-02 14:52:00,652:INFO:Uploading results into container
+2024-05-02 14:52:00,652:INFO:Uploading model into container now
+2024-05-02 14:52:00,653:INFO:_master_model_container: 16
+2024-05-02 14:52:00,653:INFO:_display_container: 2
+2024-05-02 14:52:00,653:INFO:DummyClassifier(constant=None, random_state=3386, strategy='prior')
+2024-05-02 14:52:00,654:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:00,758:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:52:00,759:INFO:Creating metrics dataframe
+2024-05-02 14:52:00,773:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:323: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  master_display_.apply(
+
+2024-05-02 14:52:00,783:INFO:Initializing create_model()
+2024-05-02 14:52:00,783:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=3386, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:52:00,783:INFO:Checking exceptions
+2024-05-02 14:52:00,785:INFO:Importing libraries
+2024-05-02 14:52:00,785:INFO:Copying training dataset
+2024-05-02 14:52:00,796:INFO:Defining folds
+2024-05-02 14:52:00,796:INFO:Declaring metric variables
+2024-05-02 14:52:00,796:INFO:Importing untrained model
+2024-05-02 14:52:00,796:INFO:Declaring custom model
+2024-05-02 14:52:00,797:INFO:Gradient Boosting Classifier Imported successfully
+2024-05-02 14:52:00,797:INFO:Cross validation set to False
+2024-05-02 14:52:00,797:INFO:Fitting Model
+2024-05-02 14:52:01,591:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=3386, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2024-05-02 14:52:01,591:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:01,714:INFO:_master_model_container: 16
+2024-05-02 14:52:01,714:INFO:_display_container: 2
+2024-05-02 14:52:01,714:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=3386, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2024-05-02 14:52:01,714:INFO:compare_models() successfully completed......................................
+2024-05-02 14:52:01,765:INFO:Initializing create_model()
+2024-05-02 14:52:01,765:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=ada, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:52:01,765:INFO:Checking exceptions
+2024-05-02 14:52:01,777:INFO:Importing libraries
+2024-05-02 14:52:01,778:INFO:Copying training dataset
+2024-05-02 14:52:01,788:INFO:Defining folds
+2024-05-02 14:52:01,788:INFO:Declaring metric variables
+2024-05-02 14:52:01,791:INFO:Importing untrained model
+2024-05-02 14:52:01,794:INFO:Ada Boost Classifier Imported successfully
+2024-05-02 14:52:01,800:INFO:Starting cross validation
+2024-05-02 14:52:01,800:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:52:01,825:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,827:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,828:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,833:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,833:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,836:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,837:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,847:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,847:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:01,850:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,333:INFO:Calculating mean and std
+2024-05-02 14:52:02,334:INFO:Creating metrics dataframe
+2024-05-02 14:52:02,339:INFO:Finalizing model
+2024-05-02 14:52:02,349:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,629:INFO:Uploading results into container
+2024-05-02 14:52:02,629:INFO:Uploading model into container now
+2024-05-02 14:52:02,636:INFO:_master_model_container: 17
+2024-05-02 14:52:02,636:INFO:_display_container: 3
+2024-05-02 14:52:02,637:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386)
+2024-05-02 14:52:02,637:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:02,748:INFO:Initializing create_model()
+2024-05-02 14:52:02,748:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=ada, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:52:02,748:INFO:Checking exceptions
+2024-05-02 14:52:02,761:INFO:Importing libraries
+2024-05-02 14:52:02,761:INFO:Copying training dataset
+2024-05-02 14:52:02,770:INFO:Defining folds
+2024-05-02 14:52:02,770:INFO:Declaring metric variables
+2024-05-02 14:52:02,773:INFO:Importing untrained model
+2024-05-02 14:52:02,776:INFO:Ada Boost Classifier Imported successfully
+2024-05-02 14:52:02,782:INFO:Starting cross validation
+2024-05-02 14:52:02,783:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:52:02,807:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,807:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,811:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,811:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,813:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,817:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,819:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,821:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,827:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:02,827:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:03,334:INFO:Calculating mean and std
+2024-05-02 14:52:03,335:INFO:Creating metrics dataframe
+2024-05-02 14:52:03,341:INFO:Finalizing model
+2024-05-02 14:52:03,351:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:03,630:INFO:Uploading results into container
+2024-05-02 14:52:03,631:INFO:Uploading model into container now
+2024-05-02 14:52:03,638:INFO:_master_model_container: 18
+2024-05-02 14:52:03,639:INFO:_display_container: 4
+2024-05-02 14:52:03,639:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386)
+2024-05-02 14:52:03,639:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:03,756:INFO:Initializing tune_model()
+2024-05-02 14:52:03,756:INFO:tune_model(estimator=AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386), fold=None, round=4, n_iter=10, custom_grid=None, optimize=Accuracy, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={}, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>)
+2024-05-02 14:52:03,756:INFO:Checking exceptions
+2024-05-02 14:52:03,775:INFO:Copying training dataset
+2024-05-02 14:52:03,784:INFO:Checking base model
+2024-05-02 14:52:03,784:INFO:Base model : Ada Boost Classifier
+2024-05-02 14:52:03,787:INFO:Declaring metric variables
+2024-05-02 14:52:03,791:INFO:Defining Hyperparameters
+2024-05-02 14:52:03,888:INFO:Tuning with n_jobs=-1
+2024-05-02 14:52:03,888:INFO:Initializing RandomizedSearchCV
+2024-05-02 14:52:17,707:INFO:best_params: {'actual_estimator__n_estimators': 150, 'actual_estimator__learning_rate': 0.2, 'actual_estimator__algorithm': 'SAMME'}
+2024-05-02 14:52:17,707:INFO:Hyperparameter search completed
+2024-05-02 14:52:17,708:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:52:17,708:INFO:Initializing create_model()
+2024-05-02 14:52:17,708:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x000001FE3C82F580>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'n_estimators': 150, 'learning_rate': 0.2, 'algorithm': 'SAMME'})
+2024-05-02 14:52:17,709:INFO:Checking exceptions
+2024-05-02 14:52:17,709:INFO:Importing libraries
+2024-05-02 14:52:17,709:INFO:Copying training dataset
+2024-05-02 14:52:17,719:INFO:Defining folds
+2024-05-02 14:52:17,719:INFO:Declaring metric variables
+2024-05-02 14:52:17,722:INFO:Importing untrained model
+2024-05-02 14:52:17,722:INFO:Declaring custom model
+2024-05-02 14:52:17,726:INFO:Ada Boost Classifier Imported successfully
+2024-05-02 14:52:17,734:INFO:Starting cross validation
+2024-05-02 14:52:17,734:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:52:19,037:INFO:Calculating mean and std
+2024-05-02 14:52:19,041:INFO:Creating metrics dataframe
+2024-05-02 14:52:19,057:INFO:Finalizing model
+2024-05-02 14:52:19,786:INFO:Uploading results into container
+2024-05-02 14:52:19,786:INFO:Uploading model into container now
+2024-05-02 14:52:19,786:INFO:_master_model_container: 19
+2024-05-02 14:52:19,786:INFO:_display_container: 5
+2024-05-02 14:52:19,787:INFO:AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386)
+2024-05-02 14:52:19,787:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:19,874:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:52:19,874:INFO:choose_better activated
+2024-05-02 14:52:19,877:INFO:SubProcess create_model() called ==================================
+2024-05-02 14:52:19,878:INFO:Initializing create_model()
+2024-05-02 14:52:19,878:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:52:19,878:INFO:Checking exceptions
+2024-05-02 14:52:19,880:INFO:Importing libraries
+2024-05-02 14:52:19,880:INFO:Copying training dataset
+2024-05-02 14:52:19,887:INFO:Defining folds
+2024-05-02 14:52:19,887:INFO:Declaring metric variables
+2024-05-02 14:52:19,888:INFO:Importing untrained model
+2024-05-02 14:52:19,888:INFO:Declaring custom model
+2024-05-02 14:52:19,888:INFO:Ada Boost Classifier Imported successfully
+2024-05-02 14:52:19,888:INFO:Starting cross validation
+2024-05-02 14:52:19,889:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-05-02 14:52:19,908:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,910:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,913:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,916:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,921:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,922:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,929:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,931:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,936:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:19,938:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:20,425:INFO:Calculating mean and std
+2024-05-02 14:52:20,426:INFO:Creating metrics dataframe
+2024-05-02 14:52:20,432:INFO:Finalizing model
+2024-05-02 14:52:20,457:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2024-05-02 14:52:20,748:INFO:Uploading results into container
+2024-05-02 14:52:20,749:INFO:Uploading model into container now
+2024-05-02 14:52:20,749:INFO:_master_model_container: 20
+2024-05-02 14:52:20,749:INFO:_display_container: 6
+2024-05-02 14:52:20,749:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386)
+2024-05-02 14:52:20,749:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:20,832:INFO:SubProcess create_model() end ==================================
+2024-05-02 14:52:20,832:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=3386) result for Accuracy is 0.896
+2024-05-02 14:52:20,832:INFO:AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386) result for Accuracy is 0.8975
+2024-05-02 14:52:20,833:INFO:AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386) is best model
+2024-05-02 14:52:20,833:INFO:choose_better completed
+2024-05-02 14:52:20,840:INFO:_master_model_container: 20
+2024-05-02 14:52:20,840:INFO:_display_container: 5
+2024-05-02 14:52:20,840:INFO:AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386)
+2024-05-02 14:52:20,840:INFO:tune_model() successfully completed......................................
+2024-05-02 14:52:20,929:INFO:Initializing plot_model()
+2024-05-02 14:52:20,929:INFO:plot_model(plot=confusion_matrix, fold=None, verbose=True, display=None, display_format=None, estimator=AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, system=True)
+2024-05-02 14:52:20,929:INFO:Checking exceptions
+2024-05-02 14:52:20,937:INFO:Preloading libraries
+2024-05-02 14:52:20,946:INFO:Copying training dataset
+2024-05-02 14:52:20,947:INFO:Plot type: confusion_matrix
+2024-05-02 14:52:21,017:INFO:Fitting Model
+2024-05-02 14:52:21,017:WARNING:d:\Proyectos\Pruebas técnicas\Banco de Bogotá\venv\lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but AdaBoostClassifier was fitted with feature names
+  warnings.warn(
+
+2024-05-02 14:52:21,018:INFO:Scoring test/hold-out set
+2024-05-02 14:52:21,201:INFO:Visual Rendered Successfully
+2024-05-02 14:52:21,281:INFO:plot_model() successfully completed......................................
+2024-05-02 14:52:21,321:INFO:Initializing plot_model()
+2024-05-02 14:52:21,321:INFO:plot_model(plot=feature, fold=None, verbose=True, display=None, display_format=None, estimator=AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386), feature_name=None, fit_kwargs=None, groups=None, label=False, plot_kwargs=None, save=False, scale=1, self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, system=True)
+2024-05-02 14:52:21,321:INFO:Checking exceptions
+2024-05-02 14:52:21,332:INFO:Preloading libraries
+2024-05-02 14:52:21,343:INFO:Copying training dataset
+2024-05-02 14:52:21,343:INFO:Plot type: feature
+2024-05-02 14:52:21,343:WARNING:No coef_ found. Trying feature_importances_
+2024-05-02 14:52:21,512:INFO:Visual Rendered Successfully
+2024-05-02 14:52:21,596:INFO:plot_model() successfully completed......................................
+2024-05-02 14:52:21,634:INFO:Initializing predict_model()
+2024-05-02 14:52:21,634:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001FE3D43EE50>)
+2024-05-02 14:52:21,634:INFO:Checking exceptions
+2024-05-02 14:52:21,635:INFO:Preloading libraries
+2024-05-02 14:52:21,636:INFO:Set up data.
+2024-05-02 14:52:21,653:INFO:Set up index.
+2024-05-02 14:52:21,892:INFO:Initializing finalize_model()
+2024-05-02 14:52:21,892:INFO:finalize_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386), fit_kwargs=None, groups=None, model_only=False, experiment_custom_tags=None)
+2024-05-02 14:52:21,893:INFO:Finalizing AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386)
+2024-05-02 14:52:21,899:INFO:Initializing create_model()
+2024-05-02 14:52:21,899:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=AdaBoostClassifier(algorithm='SAMME', estimator=None, learning_rate=0.2,
+                   n_estimators=150, random_state=3386), fold=None, round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=False, metrics=None, display=None, model_only=False, return_train_score=False, error_score=0.0, kwargs={})
+2024-05-02 14:52:21,899:INFO:Checking exceptions
+2024-05-02 14:52:21,900:INFO:Importing libraries
+2024-05-02 14:52:21,900:INFO:Copying training dataset
+2024-05-02 14:52:21,901:INFO:Defining folds
+2024-05-02 14:52:21,901:INFO:Declaring metric variables
+2024-05-02 14:52:21,901:INFO:Importing untrained model
+2024-05-02 14:52:21,901:INFO:Declaring custom model
+2024-05-02 14:52:21,901:INFO:Ada Boost Classifier Imported successfully
+2024-05-02 14:52:21,902:INFO:Cross validation set to False
+2024-05-02 14:52:21,903:INFO:Fitting Model
+2024-05-02 14:52:22,661:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=...
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('actual_estimator',
+                 AdaBoostClassifier(algorithm='SAMME', estimator=None,
+                                    learning_rate=0.2, n_estimators=150,
+                                    random_state=3386))],
+         verbose=False)
+2024-05-02 14:52:22,661:INFO:create_model() successfully completed......................................
+2024-05-02 14:52:22,743:INFO:_master_model_container: 20
+2024-05-02 14:52:22,743:INFO:_display_container: 6
+2024-05-02 14:52:22,746:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=...
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('actual_estimator',
+                 AdaBoostClassifier(algorithm='SAMME', estimator=None,
+                                    learning_rate=0.2, n_estimators=150,
+                                    random_state=3386))],
+         verbose=False)
+2024-05-02 14:52:22,746:INFO:finalize_model() successfully completed......................................
+2024-05-02 14:52:22,868:INFO:Initializing save_model()
+2024-05-02 14:52:22,869:INFO:save_model(model=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=...
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('actual_estimator',
+                 AdaBoostClassifier(algorithm='SAMME', estimator=None,
+                                    learning_rate=0.2, n_estimators=150,
+                                    random_state=3386))],
+         verbose=False), model_name=d:/Proyectos/Pruebas técnicas/Banco de Bogotá/data/salida/ADA_model_02-05-2024, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\almontao\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2024-05-02 14:52:22,869:INFO:Adding model into prep_pipe
+2024-05-02 14:52:22,869:WARNING:Only Model saved as it was a pipeline.
+2024-05-02 14:52:22,917:INFO:d:/Proyectos/Pruebas técnicas/Banco de Bogotá/data/salida/ADA_model_02-05-2024.pkl saved in current working directory
+2024-05-02 14:52:22,920:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=...
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('actual_estimator',
+                 AdaBoostClassifier(algorithm='SAMME', estimator=None,
+                                    learning_rate=0.2, n_estimators=150,
+                                    random_state=3386))],
+         verbose=False)
+2024-05-02 14:52:22,920:INFO:save_model() successfully completed......................................
+2024-05-02 14:52:23,040:INFO:Initializing load_model()
+2024-05-02 14:52:23,041:INFO:load_model(model_name=d:/Proyectos/Pruebas técnicas/Banco de Bogotá/data/salida/ADA_model_02-05-2024, platform=None, authentication=None, verbose=True)
+2024-05-02 14:52:23,163:INFO:Initializing predict_model()
+2024-05-02 14:52:23,163:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FE36FDA8E0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\almontao\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['Tipo_Trabajo_ENC',
+                                             'Estado_Civil_ENC', 'mora',
+                                             'Vivienda', 'Consumo',
+                                             'Contacto_ENC', 'Dias_Ultima_Camp',
+                                             'No_Contactos', 'emp_var_rate',
+                                             'cons_price_idx', 'cons_conf_idx',
+                                             'euribor3m'],
+                                    transformer=SimpleImpute...
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent'))),
+                ('actual_estimator',
+                 AdaBoostClassifier(algorithm='SAMME', estimator=None,
+                                    learning_rate=0.2, n_estimators=150,
+                                    random_state=3386))],
+         verbose=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001FE3D1A1430>)
+2024-05-02 14:52:23,163:INFO:Checking exceptions
+2024-05-02 14:52:23,163:INFO:Preloading libraries
+2024-05-02 14:52:23,166:INFO:Set up data.
+2024-05-02 14:52:23,187:INFO:Set up index.
