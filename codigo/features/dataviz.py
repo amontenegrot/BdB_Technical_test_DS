@@ -42,21 +42,33 @@ def conversion_rate_chart(predictor_var, var_to_predict, dataframe, type='line',
         fig.show()
 
 # Tasa de conversión para dos columnas
-def cr_bivariate(col_list, dataframe, orden=None):
-    cr = dataframe.groupby(col_list)['Sales'].mean().to_frame().reset_index()
+# def cr_bivariate(col_list, dataframe, orden=None):
+#     cr = dataframe.groupby(col_list)['Sales'].mean().to_frame().reset_index()
 
-    # Gráfica
-    plt.figure(figsize=(13,7))
-    ax = sns.pointplot(x=cr['Sales'], y=cr[col_list[0]], hue=cr[col_list[1]], join=False, order=orden)
-    ax.yaxis.grid(True)
-    ax.xaxis.grid(True)
-    plt.title(f'Tasa de conversión para "{col_list[0]}" y "{col_list[1]}"')
-    plt.xlabel('Tasa de conversión (%)')
-    plt.xlim((0,1))
+#     # Gráfica
+#     plt.figure(figsize=(13,7))
+#     ax = sns.pointplot(x=cr['Sales'], y=cr[col_list[0]], hue=cr[col_list[1]], join=False, order=orden)
+#     ax.yaxis.grid(True)
+#     ax.xaxis.grid(True)
+#     plt.title(f'Tasa de conversión para "{col_list[0]}" y "{col_list[1]}"')
+#     plt.xlabel('Tasa de conversión (%)')
+#     plt.xlim((0,1))
   
-    fig = px.scatter(dataframe, x=cr['Sales'], y=cr[col_list[0]], color=cr[col_list[0]],
-                        title=f'Tasa de conversión para {col_list[0]} y {col_list[1]}',
-                        # labels={"salary":"Annual Salary (in thousands)"} # customize axis label
-                        )
-    fig.show()
+#     fig = px.scatter(dataframe, x=cr['Sales'], y=cr[col_list[0]], color=cr[col_list[0]],
+#                         title=f'Tasa de conversión para {col_list[0]} y {col_list[1]}',
+#                         # labels={"salary":"Annual Salary (in thousands)"} # customize axis label
+#                         )
+#     fig.show()
     
+
+def graficar_tc_bivariada(col_list, dataframe, orden=None):
+  tc = dataframe.groupby(col_list)['y'].mean().to_frame().reset_index()
+
+  # Gráfica
+  plt.figure(figsize=(13,7))
+  ax = sns.pointplot(x=tc['y'], y=tc[col_list[0]], hue=tc[col_list[1]], join=False, order=orden)
+  ax.yaxis.grid(True)
+  ax.xaxis.grid(True)
+  plt.title(f'Tasa de conversión para {col_list[0]} y {col_list[1]}')
+  plt.xlabel('Tasa de conversión (%)')
+  plt.xlim((0,1))

@@ -44,3 +44,4 @@ def read_data_from_database(db_path: str, table_name: str) -> Optional[pd.DataFr
     finally:
         if 'conn' in locals():
             conn.close()
+            

@@ -20,9 +20,10 @@ df_train = pd.read_csv(DATA_PATH + 'train.csv', dtype={'nr_employed': str, 'Camp
 df_test = pd.read_csv(DATA_PATH + 'test.csv', dtype={'nr_employed': str, 'Campana':str})
 
 # Represent in lowercase only if column is categorical
-cols_cat = ['Tipo_Trabajo', 'Estado_Civil', 'Educacion', 'mora',
-            'Vivienda', 'Consumo', 'Contacto', 'Mes', 'Dia', 'Campana',
-            'Resultado_Anterior', 'nr_employed'
+cols_cat = [
+    'Tipo_Trabajo', 'Estado_Civil', 'Educacion', 'mora',
+    'Vivienda', 'Consumo', 'Contacto', 'Mes', 'Dia',
+    'Campana', 'Resultado_Anterior', 'nr_employed'
 ]
 
 for column in df_train.columns:
