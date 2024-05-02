@@ -31,9 +31,10 @@ for column in df_train.columns:
         df_train[column] = df_train[column].str.lower()
         df_test[column] = df_test[column].str.lower()
 
-# Reeplace in all columns value 'unknown' by 'desconocido'
-df_train = df_train.replace('unknown', 'desconocido')
-df_test = df_test.replace('unknown', 'desconocido')
+# Manual label encoding
+encode = {'si': 1, 'no': 0}
+df_train = df_train.replace(encode).astype(int)
+df_test = df_test.replace(encode).astype(int)
 
 # Define the values to be replaced in a dictionary
 replace_dict = {
@@ -47,8 +48,6 @@ for column, replacements in replace_dict.items():
         df_test = replace_value(df_test, column, old_value, new_value)
 
 # Load to DataBase
-
-
 # Create a connection to the SQLite database
 conn = sqlite3.connect(PATH + 'data/preprocessing/clear_data.db')
 
