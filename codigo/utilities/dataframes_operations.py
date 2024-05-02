@@ -1,23 +1,23 @@
-import os
+import sqlite3
+from typing import Dict
 
 import pandas as pd
 
 
-def create_global_dataframes(path: str) -> None:
+def save_dataframe_to_sqlite(df: pd.DataFrame, table_name: str, conn: sqlite3.Connection) -> None:
     """
-    Reads all CSV files in a given directory and creates a global DataFrame for each.
+    Save a DataFrame to a specific table in an SQLite database.
 
     Parameters:
-    path (str): The directory path where the CSV files are located.
+    df -- pandas DataFrame to save.
+    table_name -- Name of the table in the SQLite database.
+    conn -- Connection to the SQLite database.
     """
-    filepaths = [f for f in os.listdir(path) if f.endswith('.csv')]  # Get filenames
-
-    # Generate dataframe names
-    df_names = ['df_' + fp.rstrip('.csv') for fp in filepaths]
-
-    # Read multiples CSV
-    for i in range(len(df_names)):
-        globals()[df_names[i]] = pd.read_csv(
-            os.path.join(path, filepaths[i]),
-            encoding='latin-1'
-        )
+    try:
+        df.to_sql(table_name, conn, if_exists='replace', index=False)
+    except Exception as e:
+        print(f"Error saving DataFrame to table {table_name}: {e}")
+        raise
+    finally:
+        conn.commit()  # Commit changes
+        conn.close()
