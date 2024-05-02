@@ -60,15 +60,12 @@ for column, replacements in replace_dict.items():
         df_test = replace_value(df_test, column, old_value, new_value)
 
 # Load to DataBase
-# Create a connection to the SQLite database
-conn = sqlite3.connect(PATH + 'data/preprocessing/BANCO_BOGOTA.db')
-
 # Assume df_train and df_test are your existing DataFrames
 dataframes = {'clear_train_data': df_train, 'clear_test_data': df_test}
 
 try:
     # Create a connection to the SQLite database
-    conn = sqlite3.connect(os.path.join(PATH, 'data', 'preprocessing', 'clear_data.db'))
+    conn = sqlite3.connect(os.path.join(PATH, 'data', 'preprocessing', 'BANCO_BOGOTA.db'))
 
     # Iterate over the DataFrames and their corresponding table names
     for table_name, df in dataframes.items():
