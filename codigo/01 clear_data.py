@@ -16,8 +16,14 @@ PATH = get_path()
 DATA_PATH = PATH + 'data/insumo/'
 
 # Read data
-df_train = pd.read_csv(DATA_PATH + 'train.csv', dtype={'nr_employed': str, 'Campana': str})
-df_test = pd.read_csv(DATA_PATH + 'test.csv', dtype={'nr_employed': str, 'Campana':str})
+df_train = pd.read_csv(
+    DATA_PATH + 'train.csv', dtype={'nr_employed': str, 'Campana': str},
+    na_values=['unknown']
+    )
+df_test = pd.read_csv(
+    DATA_PATH + 'test.csv', dtype={'nr_employed': str, 'Campana':str},
+    na_values=['unknown']
+    )
 
 # Represent in lowercase only if column is categorical
 cols_cat = [
