@@ -38,9 +38,15 @@ for column in df_train.columns:
         df_test[column] = df_test[column].str.lower()
 
 # Manual label encoding
-encode = {'si': 1, 'no': 0}
-df_train = df_train.replace(encode).astype(int)
-df_test = df_test.replace(encode).astype(int)
+encode = {
+    'si': 1, 'no': 0, 
+    999: -1,
+    'mon': 'lun', 'tue': 'mar', 'wed': 'mié', 'thu': 'jue', 'fri': 'vie',
+    'jan': 'ene', 'feb': 'feb', 'mar': 'mar', 'apr': 'abr', 'may': 'may', 'jun': 'jun', 
+    'jul': 'jul', 'aug': 'ago', 'sep': 'sep', 'oct': 'oct', 'nov': 'nov', 'dec': 'dic'
+    }
+df_train = df_train.replace(encode).infer_objects(copy=False)
+df_test = df_test.replace(encode).infer_objects(copy=False)
 
 # Define the values to be replaced in a dictionary
 replace_dict = {
