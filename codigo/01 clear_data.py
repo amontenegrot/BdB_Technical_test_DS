@@ -55,7 +55,6 @@ for column, replacements in replace_dict.items():
         df_test = replace_value(df_test, column, old_value, new_value)
 
 # Load to DataBase
-# Assume df_train and df_test are your existing DataFrames
 dataframes = {'clear_train_data': df_train, 'clear_test_data': df_test}
 
 try:
