@@ -28,6 +28,12 @@ df_train.insert(
     )
 )
 
+columns_drop = ['ID']
+
+for i in columns_drop:
+    df_train.drop([i], axis=1, inplace=True)
+
+
 df_test.insert(
     0, 'UUID_client', 
     df_test['ID'].apply(
@@ -38,8 +44,11 @@ df_test.insert(
 columns_drop = ['ID']
 
 for i in columns_drop:
-    df_train.drop([i], axis=1, inplace=True)
     df_test.drop([i], axis=1, inplace=True)
+
+
+df_train['UUID_client'] = df_train['UUID_client'].astype(str)
+df_test['UUID_client'] = df_test['UUID_client'].astype(str)
 
 # Represent in lowercase only if column is categorical
 cols_cat = [
