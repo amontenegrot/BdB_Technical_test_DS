@@ -3,12 +3,7 @@ import sqlite3
 
 import pandas as pd
 
-from utilities import get_path
-
-
-def replace_value(df, column, old_value, new_value):
-    df[column] = df[column].str.replace(old_value, new_value, regex=False)
-    return df
+from utilities import get_path, replace_value
 
 
 # Environment settings
@@ -37,7 +32,7 @@ for column in df_train.columns:
         df_train[column] = df_train[column].str.lower()
         df_test[column] = df_test[column].str.lower()
 
-# Manual label encoding
+# Change label encoding
 encode = {
     'si': 1, 'no': 0, 
     999: -1,
@@ -74,9 +69,9 @@ try:
 
     # Commit changes
     conn.commit()
-    print('Data loaded successfully to the database.')
+    print('Dataframes loaded successfully to the database.')
 except Exception as e:
-    print(f'An error occurred while loading data to the database: {str(e)}')
+    print(f'An error occurred while loading {table_name} to the database: {str(e)}')
     if conn is not None:
         conn.rollback()
 finally:
