@@ -3,7 +3,7 @@ import sqlite3
 
 import pandas as pd
 
-from utilities import get_path, replace_value
+from utilities import get_path, uuid_generator, replace_value
 
 
 # Environment settings
@@ -19,6 +19,27 @@ df_test = pd.read_csv(
     DATA_PATH + 'test.csv', dtype={'nr_employed': str, 'Campana':str},
     na_values=['unknown']
     )
+
+# Cibersecurity
+df_train.insert(
+    0, 'UUID_client', 
+    df_train['ID'].apply(
+    lambda x: uuid_generator(x)
+    )
+)
+
+df_test.insert(
+    0, 'UUID_client', 
+    df_test['ID'].apply(
+    lambda x: uuid_generator(x)
+    )
+)
+
+columns_drop = ['ID']
+
+for i in columns_drop:
+    df_train.drop([i], axis=1, inplace=True)
+    df_test.drop([i], axis=1, inplace=True)
 
 # Represent in lowercase only if column is categorical
 cols_cat = [
